@@ -186,7 +186,10 @@
 		self.userInteractionEnabled= NO;
 		self.imageView.image = kEGOPhotoLoadingPlaceholder;
 	}
-	
+    if ([self.imageView.image imageOrientation] != UIImageOrientationUp) {
+        CGImageRef imgRef = self.imageView.image.CGImage;
+        self.imageView.image =  [UIImage imageWithCGImage:imgRef scale:1.0 orientation:UIImageOrientationUp];
+    }
 	[self layoutScrollViewAnimated:NO];
 }
 
