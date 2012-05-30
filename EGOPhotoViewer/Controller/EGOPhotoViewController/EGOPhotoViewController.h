@@ -51,12 +51,8 @@
 	UIColor* _oldToolBarTintColor;	
 	BOOL _oldToolBarHidden;
 
-	BOOL _autoresizedPopover;
-	BOOL _embeddedInPopover;
-	
+
 	BOOL _fullScreen;
-	BOOL _fromPopover;
-	UIView *_popoverOverlay;
 	UIView *_transferView;
   
   BOOL _actionButtonHidden;
@@ -65,14 +61,11 @@
 
 - (id)initWithPhotoSource:(id <EGOPhotoSource>)aPhotoSource;
 - (id)initWithPhotoSource:(id <EGOPhotoSource> )aSource andPhotoIndex:(NSInteger)index;
-- (id)initWithPopoverController:(id)aPopoverController photoSource:(id <EGOPhotoSource>)aPhotoSource;
 
 @property(nonatomic, strong, readonly) id <EGOPhotoSource> photoSource;
 @property(nonatomic, strong) NSMutableArray *photoViews;
 @property(nonatomic, strong) UIScrollView *scrollView;
-@property(nonatomic, assign) BOOL _fromPopover;
 @property(nonatomic, assign) BOOL actionButtonHidden;
-@property(nonatomic, assign) BOOL embeddedInPopover;
 
 - (NSInteger)currentPhotoIndex;
 - (void)moveToPhotoAtIndex:(NSInteger)index animated:(BOOL)animated;
