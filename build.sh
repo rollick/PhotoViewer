@@ -7,28 +7,29 @@
 #  Copyright 2011 Felix Schulze. All rights reserved.
 ###########################################################################
 #
-SDKVERSION="5.0"
+SDKVERSION="5.1"
 #
 ###########################################################################
 #
 # Don't change anything here
 DEVICESDK="iphoneos${SDKVERSION}"
 SIMSDK="iphonesimulator${SDKVERSION}"
+DEVELOPER=`xcode-select -print-path`
 
 echo "Building libPhotoViewer for iPhoneSimulator and iPhoneOS ${SDKVERSION}"
 # Clean the targets
-if ! /Developer/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$DEVICESDK" clean ; then
+if ! $DEVELOPER/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$DEVICESDK" clean ; then
 	exit 1
 fi
-if ! /Developer/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$SIMSDK" clean ; then
+if ! $DEVELOPER/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$SIMSDK" clean ; then
 	exit 1
 fi
 
 # Build the targets
-if ! /Developer/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$DEVICESDK" build ; then
+if ! $DEVELOPER/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$DEVICESDK" build ; then
 	exit 1
 fi
-if ! /Developer/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$SIMSDK" build ; then
+if ! $DEVELOPER/usr/bin/xcodebuild -project "photoviewer.xcodeproj" -target photoviewer -configuration "Release" -sdk "$SIMSDK" build ; then
 	exit 1
 fi
 

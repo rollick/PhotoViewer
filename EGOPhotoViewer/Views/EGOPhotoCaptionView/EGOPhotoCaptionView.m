@@ -44,7 +44,6 @@
 		_textLabel.shadowColor = [UIColor blackColor];
 		_textLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		[self addSubview:_textLabel];
-		[_textLabel release];
 		
 							  
     }
@@ -88,7 +87,6 @@
 - (void)setCaptionHidden:(BOOL)hidden{
 	if (_hidden==hidden) return;
 	
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
 		
 		[UIView beginAnimations:nil context:NULL];
@@ -101,8 +99,7 @@
 		return;
 		
 	}
-#endif
-	
+
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.2f];
 	
@@ -125,15 +122,5 @@
 	_hidden=hidden;
 	
 }
-
-
-#pragma mark -
-#pragma mark Dealloc
-
-- (void)dealloc {
-	_textLabel=nil;
-    [super dealloc];
-}
-
 
 @end

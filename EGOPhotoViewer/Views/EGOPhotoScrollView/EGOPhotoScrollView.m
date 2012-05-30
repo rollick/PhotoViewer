@@ -125,13 +125,4 @@
 	}
 }
 
-
-#pragma mark -
-#pragma mark Dealloc
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-
 @end

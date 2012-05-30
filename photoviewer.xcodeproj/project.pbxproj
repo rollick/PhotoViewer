@@ -14,24 +14,19 @@
 		FD28E371139CD07900CD6A38 /* EGOPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28E34D139CD07900CD6A38 /* EGOPhotoViewController.m */; };
 		FD28E372139CD07900CD6A38 /* EGOPhotoGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = FD28E350139CD07900CD6A38 /* EGOPhotoGlobal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD28E373139CD07900CD6A38 /* EGOPhotoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FD28E354139CD07900CD6A38 /* EGOPhotoSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD28E374139CD07900CD6A38 /* EGOQuickPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = FD28E356139CD07900CD6A38 /* EGOQuickPhoto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD28E375139CD07900CD6A38 /* EGOQuickPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28E357139CD07900CD6A38 /* EGOQuickPhoto.m */; };
-		FD28E376139CD07900CD6A38 /* EGOQuickPhotoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FD28E358139CD07900CD6A38 /* EGOQuickPhotoSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD28E377139CD07900CD6A38 /* EGOQuickPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28E359139CD07900CD6A38 /* EGOQuickPhotoSource.m */; };
 		FD28E378139CD07900CD6A38 /* EGOPhotoCaptionView.h in Headers */ = {isa = PBXBuildFile; fileRef = FD28E368139CD07900CD6A38 /* EGOPhotoCaptionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD28E379139CD07900CD6A38 /* EGOPhotoCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28E369139CD07900CD6A38 /* EGOPhotoCaptionView.m */; };
 		FD28E37A139CD07900CD6A38 /* EGOPhotoImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = FD28E36B139CD07900CD6A38 /* EGOPhotoImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD28E37B139CD07900CD6A38 /* EGOPhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28E36C139CD07900CD6A38 /* EGOPhotoImageView.m */; };
 		FD28E37C139CD07900CD6A38 /* EGOPhotoScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = FD28E36E139CD07900CD6A38 /* EGOPhotoScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD28E37D139CD07900CD6A38 /* EGOPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28E36F139CD07900CD6A38 /* EGOPhotoScrollView.m */; };
-		FD28E38D139CD09600CD6A38 /* photoviewer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = FD28E38C139CD09600CD6A38 /* photoviewer-Prefix.pch */; };
-		FD6148651419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = FD6148631419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.h */; };
+		FD6148651419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = FD6148631419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD6148661419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6148641419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.m */; };
-		FDE7EC221576629700037872 /* EGOImageLoadConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7EC1E1576629700037872 /* EGOImageLoadConnection.h */; };
-		FDE7EC231576629700037872 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7EC1F1576629700037872 /* EGOImageLoadConnection.m */; };
-		FDE7EC241576629700037872 /* EGOImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7EC201576629700037872 /* EGOImageLoader.h */; };
-		FDE7EC251576629700037872 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7EC211576629700037872 /* EGOImageLoader.m */; };
-		FDE7EC2A157662B900037872 /* EGOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7EC28157662B900037872 /* EGOCache.h */; };
+		FDE7EC221576629700037872 /* EGOImageLoadConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7EC1E1576629700037872 /* EGOImageLoadConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDE7EC231576629700037872 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7EC1F1576629700037872 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDE7EC241576629700037872 /* EGOImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7EC201576629700037872 /* EGOImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDE7EC251576629700037872 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7EC211576629700037872 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDE7EC2A157662B900037872 /* EGOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FDE7EC28157662B900037872 /* EGOCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDE7EC2B157662B900037872 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE7EC29157662B900037872 /* EGOCache.m */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +41,6 @@
 		FD28E350139CD07900CD6A38 /* EGOPhotoGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOPhotoGlobal.h; sourceTree = "<group>"; };
 		FD28E351139CD07900CD6A38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD28E354139CD07900CD6A38 /* EGOPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOPhotoSource.h; sourceTree = "<group>"; };
-		FD28E356139CD07900CD6A38 /* EGOQuickPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOQuickPhoto.h; sourceTree = "<group>"; };
-		FD28E357139CD07900CD6A38 /* EGOQuickPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOQuickPhoto.m; sourceTree = "<group>"; };
-		FD28E358139CD07900CD6A38 /* EGOQuickPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOQuickPhotoSource.h; sourceTree = "<group>"; };
-		FD28E359139CD07900CD6A38 /* EGOQuickPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOQuickPhotoSource.m; sourceTree = "<group>"; };
 		FD28E35B139CD07900CD6A38 /* egopv_error_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egopv_error_placeholder.png; sourceTree = "<group>"; };
 		FD28E35C139CD07900CD6A38 /* egopv_error_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egopv_error_placeholder@2x.png"; sourceTree = "<group>"; };
 		FD28E35D139CD07900CD6A38 /* egopv_fullscreen_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egopv_fullscreen_button.png; sourceTree = "<group>"; };
@@ -174,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				FD28E353139CD07900CD6A38 /* EGOPhotoSource */,
-				FD28E355139CD07900CD6A38 /* EGOQuickPhoto */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,17 +175,6 @@
 				FD28E354139CD07900CD6A38 /* EGOPhotoSource.h */,
 			);
 			path = EGOPhotoSource;
-			sourceTree = "<group>";
-		};
-		FD28E355139CD07900CD6A38 /* EGOQuickPhoto */ = {
-			isa = PBXGroup;
-			children = (
-				FD28E356139CD07900CD6A38 /* EGOQuickPhoto.h */,
-				FD28E357139CD07900CD6A38 /* EGOQuickPhoto.m */,
-				FD28E358139CD07900CD6A38 /* EGOQuickPhotoSource.h */,
-				FD28E359139CD07900CD6A38 /* EGOQuickPhotoSource.m */,
-			);
-			path = EGOQuickPhoto;
 			sourceTree = "<group>";
 		};
 		FD28E35A139CD07900CD6A38 /* Resources */ = {
@@ -282,16 +261,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6148651419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.h in Headers */,
 				FD28E370139CD07900CD6A38 /* EGOPhotoViewController.h in Headers */,
 				FD28E372139CD07900CD6A38 /* EGOPhotoGlobal.h in Headers */,
 				FD28E373139CD07900CD6A38 /* EGOPhotoSource.h in Headers */,
-				FD28E374139CD07900CD6A38 /* EGOQuickPhoto.h in Headers */,
-				FD28E376139CD07900CD6A38 /* EGOQuickPhotoSource.h in Headers */,
 				FD28E378139CD07900CD6A38 /* EGOPhotoCaptionView.h in Headers */,
 				FD28E37A139CD07900CD6A38 /* EGOPhotoImageView.h in Headers */,
 				FD28E37C139CD07900CD6A38 /* EGOPhotoScrollView.h in Headers */,
-				FD28E38D139CD09600CD6A38 /* photoviewer-Prefix.pch in Headers */,
-				FD6148651419EF8E00E68AC6 /* UINavigationItem+ColoredTitle.h in Headers */,
 				FDE7EC221576629700037872 /* EGOImageLoadConnection.h in Headers */,
 				FDE7EC241576629700037872 /* EGOImageLoader.h in Headers */,
 				FDE7EC2A157662B900037872 /* EGOCache.h in Headers */,
@@ -351,8 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD28E371139CD07900CD6A38 /* EGOPhotoViewController.m in Sources */,
-				FD28E375139CD07900CD6A38 /* EGOQuickPhoto.m in Sources */,
-				FD28E377139CD07900CD6A38 /* EGOQuickPhotoSource.m in Sources */,
 				FD28E379139CD07900CD6A38 /* EGOPhotoCaptionView.m in Sources */,
 				FD28E37B139CD07900CD6A38 /* EGOPhotoImageView.m in Sources */,
 				FD28E37D139CD07900CD6A38 /* EGOPhotoScrollView.m in Sources */,
@@ -417,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/photoviewer.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "photoviewer-Prefix.pch";
@@ -431,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/photoviewer.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "photoviewer-Prefix.pch";

@@ -69,27 +69,23 @@
 		scrollView.opaque = YES;
 		scrollView.delegate = self;
 		[self addSubview:scrollView];
-		_scrollView = [scrollView retain];
-		[scrollView release];
+		_scrollView = scrollView;
 
 		UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
 		imageView.opaque = YES;
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
 		imageView.tag = ZOOM_VIEW_TAG;
 		[_scrollView addSubview:imageView];
-		_imageView = [imageView retain];
-		[imageView release];
+		_imageView = imageView;
 		
 		UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 		activityView.frame = CGRectMake((CGRectGetWidth(self.frame) / 2) - 11.0f, CGRectGetHeight(self.frame) - 100.0f , 22.0f, 22.0f);
 		activityView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
 		[self addSubview:activityView];
-		_activityView = [activityView retain];
-		[activityView release];
+		_activityView = activityView;
 		
 		RotateGesture *gesture = [[RotateGesture alloc] initWithTarget:self action:@selector(rotate:)];
 		[self addGestureRecognizer:gesture];
-		[gesture release];
 		
 	}
     return self;
@@ -113,8 +109,8 @@
 		[[EGOImageLoader sharedImageLoader] cancelLoadForURL:self.photo.URL];
 	}
 	
-	[_photo release], _photo = nil;
-	_photo = [aPhoto retain];
+	_photo = nil;
+	_photo = aPhoto;
 	
 	if (self.photo.image) {
 		
@@ -123,9 +119,7 @@
 	} else {
 		
 		if ([self.photo.URL isFileURL]) {
-			
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 40000
-			
+
 			NSError *error = nil;
 			NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:[self.photo.URL path] error:&error];
 			NSInteger fileSize = [[attributes objectForKey:NSFileSize] integerValue];
@@ -158,11 +152,6 @@
 				self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.photo.URL]];
 				
 			}
-
-#else
-			self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.photo.URL]];
-#endif
-			
 			
 		} else {
 			self.imageView.image = [[EGOImageLoader sharedImageLoader] imageForURL:self.photo.URL shouldLoadWithObserver:self];
@@ -238,8 +227,8 @@
 	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
 	[animation setValue:[NSNumber numberWithInt:101] forKey:@"AnimationType"];
 	animation.delegate = self;
-	animation.fromValue = (id)[UIColor clearColor].CGColor;
-	animation.toValue = (id)[UIColor blackColor].CGColor;
+	animation.fromValue = (__bridge id)[UIColor clearColor].CGColor;
+	animation.toValue = (__bridge id)[UIColor blackColor].CGColor;
 	animation.duration = 0.4f;
 	[self.layer addAnimation:animation forKey:@"FadeAnimation"];
 	
@@ -575,11 +564,7 @@
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
-	[_activityView release], _activityView=nil;
-	[_imageView release]; _imageView=nil;
-	[_scrollView release]; _scrollView=nil;
-	[_photo release]; _photo=nil;
-    [super dealloc];
+	_activityView=nil;
 	
 }
 

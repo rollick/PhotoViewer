@@ -39,8 +39,6 @@
 
 // Model
 #import "EGOPhotoSource.h"
-#import "EGOQuickPhoto.h"
-#import "EGOQuickPhotoSource.h"
 
 // Loading and Disk I/O 
 #import "EGOImageLoadConnection.h"

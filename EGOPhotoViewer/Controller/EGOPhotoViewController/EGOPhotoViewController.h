@@ -31,11 +31,8 @@
 @class EGOPhotoImageView, EGOPhotoCaptionView;
 @interface EGOPhotoViewController : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
 @private
-	id <EGOPhotoSource> _photoSource;
 	EGOPhotoCaptionView *_captionView;
-	NSMutableArray *_photoViews;
-	UIScrollView *_scrollView;	
-	
+
 	NSInteger _pageIndex;
 	BOOL _rotating;
 	BOOL _barsHidden;
@@ -66,20 +63,15 @@
 	
 }
 
-- (id)initWithPhoto:(id<EGOPhoto>)aPhoto;
-
-- (id)initWithImage:(UIImage*)anImage;
-- (id)initWithImageURL:(NSURL*)anImageURL;
-
 - (id)initWithPhotoSource:(id <EGOPhotoSource>)aPhotoSource;
 - (id)initWithPhotoSource:(id <EGOPhotoSource> )aSource andPhotoIndex:(NSInteger)index;
 - (id)initWithPopoverController:(id)aPopoverController photoSource:(id <EGOPhotoSource>)aPhotoSource;
 
-@property(nonatomic,readonly) id <EGOPhotoSource> photoSource;
-@property(nonatomic,retain) NSMutableArray *photoViews;
-@property(nonatomic,retain) UIScrollView *scrollView;
-@property(nonatomic,assign) BOOL _fromPopover;
-@property(nonatomic,assign) BOOL actionButtonHidden;
+@property(nonatomic, strong, readonly) id <EGOPhotoSource> photoSource;
+@property(nonatomic, strong) NSMutableArray *photoViews;
+@property(nonatomic, strong) UIScrollView *scrollView;
+@property(nonatomic, assign) BOOL _fromPopover;
+@property(nonatomic, assign) BOOL actionButtonHidden;
 @property(nonatomic, assign) BOOL embeddedInPopover;
 
 - (NSInteger)currentPhotoIndex;

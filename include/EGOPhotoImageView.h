@@ -33,9 +33,6 @@
 
 @interface EGOPhotoImageView : UIView <EGOImageLoaderObserver, UIScrollViewDelegate>{
 @private
-	EGOPhotoScrollView *_scrollView;
-	id <EGOPhoto> _photo;
-	UIImageView *_imageView;
 	UIActivityIndicatorView *_activityView;
 	
 	BOOL _loading;
@@ -45,9 +42,9 @@
 	
 }
 
-@property(nonatomic,readonly) id <EGOPhoto> photo;
-@property(nonatomic,readonly) UIImageView *imageView;
-@property(nonatomic,readonly) EGOPhotoScrollView *scrollView;
+@property(nonatomic, strong, readonly) id <EGOPhoto> photo;
+@property(nonatomic, strong, readonly) UIImageView *imageView;
+@property(nonatomic, strong, readonly) EGOPhotoScrollView *scrollView;
 @property(nonatomic,assign,getter=isLoading) BOOL loading;
 
 - (void)setPhoto:(id <EGOPhoto>)aPhoto;
