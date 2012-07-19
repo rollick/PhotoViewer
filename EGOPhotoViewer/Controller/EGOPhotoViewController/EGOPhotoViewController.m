@@ -896,15 +896,9 @@
 #pragma mark Memory
 
 - (void)didReceiveMemoryWarning{
-	[super didReceiveMemoryWarning];
-}
-
-- (void)viewDidUnload{
-	
-	self.photoViews=nil;
-	self.scrollView=nil;
-	_captionView=nil;
-	
+    self.photoViews=nil;
+   	self.scrollView=nil;
+   	_captionView=nil;
 }
 
 - (void)dealloc {
