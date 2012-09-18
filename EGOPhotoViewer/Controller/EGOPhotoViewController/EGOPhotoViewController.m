@@ -588,31 +588,32 @@
 }
 
 - (void)moveToPhotoAtIndex:(NSInteger)index animated:(BOOL)animated {
-	NSAssert(index < [self.photoSource numberOfPhotos] && index >= 0, @"Photo index passed out of bounds");
-	
-	_pageIndex = index;
-	[self setViewState];
+    if (index < [self.photoSource numberOfPhotos] && index >= 0) {
 
-	[self enqueuePhotoViewAtIndex:index];
-	
-	[self loadScrollViewWithPage:index-1];
-	[self loadScrollViewWithPage:index];
-	[self loadScrollViewWithPage:index+1];
-	
-	
-	[self.scrollView scrollRectToVisible:((EGOPhotoImageView*)[self.photoViews objectAtIndex:index]).frame animated:animated];
-	
-	if ([[self.photoSource photoAtIndex:_pageIndex] didFail]) {
-		[self setBarsHidden:NO animated:YES];
-	}
-	
-	//  reset any zoomed side views
-	if (index + 1 < [self.photoSource numberOfPhotos] && (NSNull*)[self.photoViews objectAtIndex:index+1] != [NSNull null]) {
-		[((EGOPhotoImageView*)[self.photoViews objectAtIndex:index+1]) killScrollViewZoom];
-	} 
-	if (index - 1 >= 0 && (NSNull*)[self.photoViews objectAtIndex:index-1] != [NSNull null]) {
-		[((EGOPhotoImageView*)[self.photoViews objectAtIndex:index-1]) killScrollViewZoom];
-	} 	
+        _pageIndex = index;
+        [self setViewState];
+
+        [self enqueuePhotoViewAtIndex:index];
+
+        [self loadScrollViewWithPage:index - 1];
+        [self loadScrollViewWithPage:index];
+        [self loadScrollViewWithPage:index + 1];
+
+
+        [self.scrollView scrollRectToVisible:((EGOPhotoImageView *) [self.photoViews objectAtIndex:index]).frame animated:animated];
+
+        if ([[self.photoSource photoAtIndex:_pageIndex] didFail]) {
+            [self setBarsHidden:NO animated:YES];
+        }
+
+        //  reset any zoomed side views
+        if (index + 1 < [self.photoSource numberOfPhotos] && (NSNull *) [self.photoViews objectAtIndex:index + 1] != [NSNull null]) {
+            [((EGOPhotoImageView *) [self.photoViews objectAtIndex:index + 1]) killScrollViewZoom];
+        }
+        if (index - 1 >= 0 && (NSNull *) [self.photoViews objectAtIndex:index - 1] != [NSNull null]) {
+            [((EGOPhotoImageView *) [self.photoViews objectAtIndex:index - 1]) killScrollViewZoom];
+        }
+    }
 	
 }
 
